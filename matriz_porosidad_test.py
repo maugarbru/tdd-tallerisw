@@ -14,8 +14,8 @@ class MatrizPorosidadTests(unittest.TestCase):
     '''
     matriz = crear_matriz(6, 5, 'm', 'f')
 
-    self.assertEqual(len(matriz), 6)
-    self.assertEqual(len(matriz[0]), 5)
+    self.assertEqual(len(matriz), 5)
+    self.assertEqual(len(matriz[0]), 6)
 
 
 unittest.main()
