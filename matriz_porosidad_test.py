@@ -24,7 +24,7 @@ class MatrizPorosidadTests(unittest.TestCase):
     '''
     matriz = crear_matriz(0, 0, 'm', 'f')
 
-    self.assertEqual([matriz, []])
+    self.assertEqual(matriz, [])
 
   def test_has_correct_data(self):
     '''
