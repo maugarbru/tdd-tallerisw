@@ -37,7 +37,6 @@ class MatrizPorosidadTests(unittest.TestCase):
 
     for j in matriz:
       for i in j:
-        print(i, char1, char2, i == char1, i == char2)
         if not i == char1 and not i == char2:
           correct = False
           continue
