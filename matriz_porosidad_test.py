@@ -24,7 +24,7 @@ class MatrizPorosidadTests(unittest.TestCase):
     '''
     matriz = crear_matriz(0, 0, 'm', 'f')
 
-    self.assertEqual([matriz, []])
+    self.assertEqual(len(matriz), len([]))
 
   def test_has_correct_data(self):
     '''
@@ -42,5 +42,17 @@ class MatrizPorosidadTests(unittest.TestCase):
           continue
 
     self.assertEqual(correct, True)
+
+  def test_no_number_size(self):
+    '''
+      Should return an error if the matrix doesn't receive a number in its dimensions
+    '''
+    self.assertEqual(crear_matriz('ex', 10, 'm', 'f'), "n debe ser un número entero")
+
+  def test_negative_size(self):
+    '''
+      Should return an error if the matrix receive a negative number in its dimensions
+    '''
+    self.assertRaises(IndexError, crear_matriz(-1, -2, 'm', 'f'), 1, '1')
 
 unittest.main()
