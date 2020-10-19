@@ -47,12 +47,14 @@ class MatrizPorosidadTests(unittest.TestCase):
     '''
       Should return an error if the matrix doesn't receive a number in its dimensions
     '''
-    self.assertEqual(create_matrix('ex', 10, 'm', 'f'), "n debe ser un número entero")
+    test = lambda : create_matrix('ex', 10, 'm', 'f')
+    self.assertRaises(AssertionError, test)
 
   def test_negative_size(self):
     '''
       Should return an error if the matrix receive a negative number in its dimensions
     '''
-    self.assertRaises(IndexError, create_matrix(-1, -2, 'm', 'f'), 1, '1')
+    test = lambda : create_matrix(-1, -2, 'm', 'f')
+    self.assertRaises(AssertionError, test)
 
 unittest.main()
